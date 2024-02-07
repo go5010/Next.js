@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": "next.js13-udemy",
+      "title": "next.js13をUdemyで学ぶ",
+      "content": "shincodeさんの教材でNext.js13を学んでいます．",
+      "createdAt": "2022/7/14"
+    },
+    {
+      "id": "json-server",
+      "title": "JSONサーバー",
+      "content": "あああああああああこのように、inputのvalue属性にmessageプロパティをバインドすることで、上記のようにinputの入力欄にHello vue.js! と表示することができます。※属性にマスタッシュ構文は使用できません",
+      "createdAt": "2022/7/16"
+    }
+  ]
+}
