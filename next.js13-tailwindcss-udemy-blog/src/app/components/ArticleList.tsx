@@ -1,11 +1,16 @@
+import { Article } from "@/Data/types";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const ArticleList = () => {
+type ArticleListProps = {
+  articles: Article[];
+};
+
+const ArticleList = ({ articles }: ArticleListProps) => {
   return (
     <div>
-      <article className="shadoew my-4 flex flex-col">
+      <article className="shadow my-4 flex flex-col">
         <Link href="#" className="hover:opacity-75">
           <Image
             src="https://source.unsplash.com/collection/1346951/1000x500?sig=1"
@@ -36,7 +41,7 @@ const ArticleList = () => {
           </Link>
         </div>
       </article>
-      <article className="shadoew my-4 flex flex-col">
+      <article className="shadow my-4 flex flex-col">
         <Link href="#" className="hover:opacity-75">
           <Image
             src="https://source.unsplash.com/collection/1346951/1000x500?sig=2"
@@ -72,3 +77,5 @@ const ArticleList = () => {
 };
 
 export default ArticleList;
+
+// 20240306
