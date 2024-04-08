@@ -10,68 +10,44 @@ type ArticleListProps = {
 const ArticleList = ({ articles }: ArticleListProps) => {
   return (
     <div>
-      <article className="shadow my-4 flex flex-col">
-        <Link href="#" className="hover:opacity-75">
-          <Image
-            src="https://source.unsplash.com/collection/1346951/1000x500?sig=1"
-            alt=""
-            width={1280}
-            height={300}
-          />
-        </Link>
-        <div className="bg-white flex flex-col justify-start p-6">
-          <Link href="#" className="text-blue-700 pb-4 font-bold">
-            Technology
+      {articles.map((articles) => (
+        <article className="shadow my-4 flex flex-col" key={articles.id}>
+          <Link href={`articles/${articles.id}`} className="hover:opacity-75">
+            <Image
+              src="https://source.unsplash.com/collection/1346951/1000x500?sig=1"
+              alt=""
+              width={1280}
+              height={300}
+            />
           </Link>
-          <Link
-            href="#"
-            className="text-slate-900 text-3xl font-bold hover:text-gray-700"
-          >
-            Next.jsの勉強中
-          </Link>
-          <p className="text-sm pb-3 text-slate-900">Published on 2023/07/15</p>
-          <Link href="#" className="text-slate-900 pb-6">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed sit
-            est inventore consequatur ipsam atque adipisci, doloremque alias
-            quibusdam obcaecati voluptas modi! Magnam quidem iusto mollitia
-            impedit eligendi reprehenderit autem?
-          </Link>
-          <Link href="#" className="text-pink-800 hover:text-black">
-            続きを読む
-          </Link>
-        </div>
-      </article>
-      <article className="shadow my-4 flex flex-col">
-        <Link href="#" className="hover:opacity-75">
-          <Image
-            src="https://source.unsplash.com/collection/1346951/1000x500?sig=2"
-            alt=""
-            width={1280}
-            height={300}
-          />
-        </Link>
-        <div className="bg-white flex flex-col justify-start p-6">
-          <Link href="#" className="text-blue-700 pb-4 font-bold">
-            Technology
-          </Link>
-          <Link
-            href="#"
-            className="text-slate-900 text-3xl font-bold hover:text-gray-700"
-          >
-            Next.jsの勉強中
-          </Link>
-          <p className="text-sm pb-3 text-slate-900">Published on 2023/07/15</p>
-          <Link href="#" className="text-slate-900 pb-6">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed sit
-            est inventore consequatur ipsam atque adipisci, doloremque alias
-            quibusdam obcaecati voluptas modi! Magnam quidem iusto mollitia
-            impedit eligendi reprehenderit autem?
-          </Link>
-          <Link href="#" className="text-pink-800 hover:text-black">
-            続きを読む
-          </Link>
-        </div>
-      </article>
+          <div className="bg-white flex flex-col justify-start p-6">
+            <Link href="#" className="text-blue-700 pb-4 font-bold">
+              Technology
+            </Link>
+            <Link
+              href={`articles/${articles.id}`}
+              className="text-slate-900 text-3xl font-bold hover:text-gray-700"
+            >
+              {articles.title}
+            </Link>
+            <p className="text-sm pb-3 text-slate-900">
+              Published on {articles.createdAt}
+            </p>
+            <Link
+              href={`articles/${articles.id}`}
+              className="text-slate-900 pb-6"
+            >
+              {articles.content}
+            </Link>
+            <Link
+              href={`articles/${articles.id}`}
+              className="text-pink-800 hover:text-black"
+            >
+              続きを読む
+            </Link>
+          </div>
+        </article>
+      ))}
     </div>
   );
 };
