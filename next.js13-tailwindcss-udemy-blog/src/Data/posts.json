@@ -11,6 +11,12 @@
       "title": "JSONサーバー",
       "content": "あああああああああこのように、inputのvalue属性にmessageプロパティをバインドすることで、上記のようにinputの入力欄にHello vue.js! と表示することができます。※属性にマスタッシュ構文は使用できません",
       "createdAt": "2022/7/16"
+    },
+    {
+      "id": "revalidate-next.js13",
+      "title": "データの再検証",
+      "content": "おぱｊｆｊｋさｆぽいあぽあ",
+      "createdAt": "2022/7/17"
     }
   ]
 }
